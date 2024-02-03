@@ -1,4 +1,8 @@
 import subprocess
+import os
+stable_diffusion_dir = 'stable-diffusion' # Replace with your actual path
+os.chdir(stable_diffusion_dir)
+
 
 BATCH_SIZE = 4
 N_GPUS = 2
