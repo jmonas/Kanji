@@ -12,7 +12,7 @@ command = [
     "--base",
     "kanji.yaml",
     "--gpus",
-    "0,1",
+    "0,1,",
     "--scale_lr",
     "False",
     "--num_nodes",
@@ -25,6 +25,7 @@ command = [
     "lightning.trainer.accumulate_grad_batches=1",
     "data.params.validation.params.n_gpus=2"
 ]
-
+print("start")
 # Execute the command
 subprocess.run(command, shell=True)
+print("finished")
