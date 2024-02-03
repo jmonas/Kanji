@@ -14,7 +14,7 @@ command = [
     "main.py",
     "-t",
     "--base",
-    "kanji.yaml",
+    "/home/jmonas/sakana/kanji/kanji.yaml",
     "--gpus",
     "0,1,",
     "--scale_lr",
@@ -31,6 +31,8 @@ command = [
 ]
 print("start")
 # Execute the command
+
+
 process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 stdout, stderr = process.communicate()
 
