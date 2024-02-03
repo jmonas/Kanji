@@ -27,5 +27,13 @@ command = [
 ]
 print("start")
 # Execute the command
-subprocess.run(command, shell=True)
-print("finished")
+process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+stdout, stderr = process.communicate()
+
+# Output the results
+if process.returncode == 0:
+    print('Command executed successfully')
+    print(stdout.decode())
+else:
+    print('An error occurred')
+    print(stderr.decode())
