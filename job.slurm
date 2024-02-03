@@ -10,6 +10,8 @@
 
 module purge
 module load anaconda3/2023.9
+conda env list
+
 
 python run_job.py
 
